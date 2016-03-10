@@ -10,8 +10,26 @@ window.addEventListener('load', function() {
 		
 	}
 	
+	var dodajOpomnik = function(){
+		console.log("Evo me");
+		var naziv_opomnika = document.getElementById("naziv_opomnika").value;
+		var cas_opomnika = document.getElementById("cas_opomnika").value;
+		
+		document.getElementById("naziv_opomnika").value = "";
+		document.getElementById("cas_opomnika").value = "";
+		
+		var opomnik = '<div class="opomnik"><div class="naziv_opomnika">'+ naziv_opomnika +'</div><div class="cas_opomnika">Opomnik čez <span>' + cas_opomnika + ' sekund.</span></div></div>';
+	
+		document.getElementById("opomniki").innerHTML += opomnik;
+	}
+	
 	//izvedi prijavo
 	document.getElementById("prijavniGumb").addEventListener("click", izvediPrijavo);
+		
+	//dodaj opomnik
+	document.getElementById("dodajGumb").addEventListener("click", dodajOpomnik);
+	
+	
 		
 	//Posodobi opomnike
 	var posodobiOpomnike = function() {
@@ -28,5 +46,7 @@ window.addEventListener('load', function() {
 		}
 	}
 	setInterval(posodobiOpomnike, 1000);
+	
+	
 	
 });
