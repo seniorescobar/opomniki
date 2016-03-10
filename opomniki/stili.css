@@ -27,6 +27,9 @@ telo {
 	width: calc(100% - 20px); 
 	float: left; 
 	padding: 10px;
+	border: 1px solid red;
+	border-radius: 5px;
+	box-shadow: 0 0 10px #888888;
 }
 
 .rob {
