@@ -1,5 +1,17 @@
 window.addEventListener('load', function() {
 	//stran nalozena
+	
+	var izvediPrijavo = function(){
+		var uporabnik = document.getElementById("uporabnisko_ime").value;
+		
+		document.getElementById("uporabnik").innerHTML = uporabnik;
+		document.getElementById("pokrivalo").style.visibility = "hidden";
+		
+		
+	}
+	
+	//izvedi prijavo
+	document.getElementById("prijavniGumb").addEventListener("click", izvediPrijavo);
 		
 	//Posodobi opomnike
 	var posodobiOpomnike = function() {
